@@ -58,6 +58,29 @@
             100% { transform: translateY(0); }
         }
 
+        /* Typing animation */
+        .typing {
+            font-size: 18px;
+            color: #e63946;
+            font-weight: bold;
+            margin: 15px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #e63946;
+            width: 0;
+            animation: typing 4s steps(32, end) forwards,
+                       blink 0.7s infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
         .from {
             margin-top: 20px;
             font-weight: bold;
@@ -70,12 +93,17 @@
     <div class="card">
         <div class="rose">🌹</div>
         <h1>Happy Rose Day!</h1>
+
+        <div class="typing">
+            I am the Baadal of your Saagar
+        </div>
+
         <p>
             Just like this rose,<br>
             you add color, fragrance,<br>
-            and happiness to my life 💕<br><br>
-            Thank you for being you.
+            and happiness to my life 💕
         </p>
+
         <div class="from">
             Forever yours ❤️
         </div>
@@ -83,3 +111,4 @@
 
 </body>
 </html>
+
